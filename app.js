@@ -497,7 +497,6 @@ boxAdvertise.innerHTML= newArrayAdvertise;
 
 
 let card = document.querySelector(".box_card > .card");
-console.log(card)
 function showingCard(cardItem){
       let newCard = cardItem.map(function(e){
           return `
@@ -556,7 +555,7 @@ var member = [
   'Age' : 'Age   : 21 Year old',
   'img' : 'photo/phanna.jpg',
   'detail' : `
-  He Was born at 26 Nov 2004 <br>
+  He Was born on 26 Nov 2004 <br>
   In Present He live at St Rada ,
   PhnomPenh Thmey,Khan Toulkork ,
   Phnom Penh.
@@ -568,7 +567,7 @@ var member = [
   'Age' :  'Age   : 21 Year Old',
   'img' : 'photo/tiya.JPG',
   'detail' : `
-  He Was born at 07 Sep 2004 <br>
+  He Was born on 07 Sep 2004 <br>
   In Present He live at #C11 , St598
   ,Sangkat Toulsongke,Khan RurseyKeo
   ,Phnom Penh.
@@ -580,7 +579,7 @@ var member = [
   'major':'Major : SoftWare Engineering',
   'img' : 'photo/soriya.jpg',
   'detail' : `
-  He Was born at 14 June 2004 <br>
+  He Was born on 14 June 2004 <br>
   In Present He live at FX8H+662 Phnom Penh.
   ` ,
 },
@@ -590,7 +589,7 @@ var member = [
   'major':'Major : Software engineering',
   'img' : 'photo/rith.jpg',
   'detail' : `
-  He Was born at 28 Mar 2004 <br>
+  He Was born on 28 Mar 2004 <br>
   In Present He  live at #L15 St 202,
   Terk lork3,Khan Toulkork,Phnom Penh.
   ` ,
@@ -602,7 +601,7 @@ var member = [
   'major':'Major : SoftWare Engineering',
   'img' : 'photo/khong.jpg',
   'detail' : `
-  He Was born at 02 Dec 2002  <br>
+  He Was born on 02 Dec 2002  <br>
   In Present He live at #M176 St Oland6,
   Sangkat koukkleang ,Khan sensok,Phnom Penh.
   `,
