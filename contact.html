@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angkor Film</title>
+     <link rel="icon" type="image/x-icon" href="photo/logo_popup.png">
+     <script src="https://kit.fontawesome.com/aad838cc5a.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="style.css">
+   <style>
+            @import url('https://fonts.googleapis.com/css2?family=Battambang:wght@300&family=Fira+Sans+Extra+Condensed:wght@300&family=Josefin+Sans:ital,wght@0,600;1,500&family=Koulen&family=Patrick+Hand&family=Poppins:wght@400;600;900&family=Rowdies:wght@300&family=Ysabeau:wght@700&display=swap');
+      :root {
+    --font-menu-kh : 'Battambang', cursive;
+    --font-menu-en : font-family: 'Ysabeau', sans-serif;
+    --font-content : 'Poppins', sans-serif;
+    --bg-menu :  #1da1f2;
+    --color-border-bottom : #6F00FF; 
+    --size-btn : 10px 26px;
+    --color-btn :  #FFFE71;
+      }
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       *::before , *::after {
+        margin: 0;
+        padding: 0;
+       }
+       /* start make style of box contact */
+      .box-contact {
+        /* background-color: blue; */
+        width:100%;
+        padding: 0px 30px;
+        margin: 20px 0px;
+        display: flex;
+      }
+      /*start make srtyle of box contact left */
+  .box-contact > .box-contact-left {
+    width: 39%;
+    border-right: 1px solid white;
+    display: flex;
+    flex-direction: column;
+  }
+  .box-contact > .box-contact-left > .sub-box {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 6px;
+  }.box-contact > .box-contact-left > .sub-box >p:first-child{
+    font-size: 26px;
+    color: #FFFE71;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .box-contact > .box-contact-left >.sub-box > aside {
+    width: 100%;
+    display: flex;
+  }
+  .box-contact > .box-contact-left >.sub-box > aside > p{
+    width: 50%;
+    text-transform: uppercase;
+  }.box-contact > .box-contact-left >.sub-box > aside > p:first-child {
+    width: 26%;
+  }.box-contact > .box-contact-left >.sub-box > aside > p:last-child::before{
+    content: ":";
+    margin-right: 10px;
+  }
+
+  /* end of style box left contact  */
+  .box-contact > .box-contact-right {
+  width: 60%;
+  /* background: red; */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 15px;
+  }
+  .box-contact > .box-contact-right > p:first-child {
+    font-size: 28px;
+    color: var(--color-btn);
+    margin-bottom: 14px;
+  } .box-contact > .box-contact-right > aside {
+    width: 100%;
+    display: flex;
+  }
+  .box-contact > .box-contact-right  > aside > label , p{
+    text-transform: uppercase;
+    font-size: 15px;
+  }.box-contact > .box-contact-right  > aside > label  {
+     width: 16%;
+  }
+  .box-contact > .box-contact-right > aside > label::after {
+    content: "*";
+    font-size: 20px;
+    color: red;
+  }
+  .box-contact > .box-contact-right  > aside > div {
+    width: 85%;
+  }.width-input{
+           width: 100%;
+  } 
+  .box-contact input , select , textarea {
+      border-radius: 6px;
+      background: transparent;
+      border: 1px solid white;
+      font-size: 16px;
+      outline: none;
+  }
+  .box-contact input:focus{
+    border: 1px solid var(--bg-menu);
+  }
+  .box-contact input , textarea , select {
+    padding: 8px;
+  
+  }
+  select {
+    background:#019dff;
+  }
+  :optional{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    background: transparent;
+    text-transform: uppercase;
+  }
+  
+  ::placeholder{
+    color: rgba(0, 0, 0, 0.383);
+  }
+  .box-contact aside button {
+    border: none;
+    padding: 9px 30px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: black;
+    text-transform: uppercase;
+    background: var(--color-btn);
+  }
+  .box-contact > .box-contact-right > aside:last-child > label::after{
+    content: none;
+  }
+  @media screen and (max-width : 1023px){
+    .box-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }.box-contact > .box-contact-left {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        border:none;
+        border-bottom: 2px solid var(--color-btn);
+    }
+    .box-contact > .box-contact-right {
+        width: 100%;
+    }
+  }
+  @media screen and (max-width : 767px){
+    .box-contact >.box-contact-right > aside{
+        display: flex;
+        flex-direction: column;
+    }.box-contact >.box-contact-right > aside > label {
+        width: 100%;
+    }.box-contact >.box-contact-right > aside:nth-child(2) > div  > input:first-child{
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (max-width : 540px){
+    .box-contact > .box-contact-left > .sub-box > aside {
+        display: flex;
+        width: 100%;
+    }.box-contact > .box-contact-left > .sub-box > p:first-child {
+        font-size: 18px;
+    }
+    
+    .box-contact > .box-contact-left > .sub-box > aside > p:first-child{
+        width: 40%;
+        font-size: 10px;
+    }.box-contact > .box-contact-left > .sub-box > aside > p:last-child{
+        width: 60%;
+        font-size: 10px;
+    }
+    ::placeholder{
+        font-size: 14px;
+    }
+  }
+  /*  end of style box contact right */
+   </style>
+</head>
+<body>
+       <!-- make menu bar  -->
+       <header class="header ">
+        <!-- class list make control and set width  -->
+            <nav class="header_list">
+              <!-- class logo use for inout logo -->
+           <div class="logo">
+             <img src="photo/logo (2).png" alt="">
+           </div>
+           <!-- end of class logo -->
+           <!-- icon bar use for how bar menu when media screen responsive on screen 768px -->
+           <span class="icon_bar">&#9778;</span>
+           <!-- end of icon bar -->
+            <div class="navigation">
+              <!-- navigation bar use show when popup  -->
+              <span class="closing"></span>
+              <!-- class closing use for add content in css use after add entity code sign wronge   -->
+                <!-- use for control menu option  -->
+                   <ul class="menu">
+                  <li><a href="index.html" >MOIVES</a></li>
+                   <li><a href="cinema.html">cinema</a></li>
+                   <li><a href="promotion.html">promotion</a></li>
+                   <li><a href="new.html">new & activity</a></li>
+                   <li><a href="contact.html">contacts us</a></li>
+                   <li><i class="fa-solid fa-magnifying-glass search"></i></li>
+                </ul> 
+                <!-- end of class menu -->
+            </div>
+            <!--  end of class navigation  -->
+            <!--  start menu right for make btn search and change menu english to khmer  -->
+            <ul class="menu_right">
+              <li class="search_icon"><i class="fa-solid fa-magnifying-glass search"></i></li>
+              <li>en</li>
+            </ul>
+            <!--  end of class menu right -->
+          </nav>
+          <!--  end of menu  class header list -->
+       </header>
+       <!--  end of tag header -->
+       <!--  start make popup search  -->
+      <section class="box_search">
+        <!--  use class search make bg popup  -->
+        <!--  boxsearch use in parent search class for control header of search -->
+        <div class="sub_search">
+           <input type="text" name="text" placeholder="search" class="search">
+          <span class="closing">&#x292C;</span>
+        </div>
+             <!-- start search list use for show list that user want to find  -->
+        <div class="search_list">
+          </div>
+          <!--  end of class box search -->
+         <!--  end of  class search list  -->
+      </section>
+      <!-- end  of class search  -->
+     <!--  start make box contact us  -->
+         <section class="box-contact">
+            <!-- start ,make class box contact us -->
+               <div class="box-contact-left">
+                  
+               </div>
+               <!--  end of box contact left -->
+               <!-- start class box contact right -->
+                 <div class="box-contact-right">
+                    <p>contact us</p>
+                    <aside>
+                        <label for="">your name</label>
+                       <div>
+                        <input type="text" placeholder="FIRST NAME(English)">
+                        <input type="text" placeholder="LAST NAME(English)">
+                       </div>
+                    </aside>
+                    <aside>
+                        <label for="">E-MAIL</label>
+                       <div>
+                        <input type="text" placeholder="EMAIL" class="width-input">
+                       </div>
+                    </aside>
+                    <aside>
+                        <label for="">TELEPHONE</label>
+                       <div>
+                        <input type="text" placeholder="PHONE NUMBER" class="width-input">
+                       </div>
+                    </aside>
+                    <aside>
+                        <label for="">topic</label>
+                       <div>
+                        <select name="" id="" class="width-input">
+                            <option value="#" hidden>please select topic</option>
+                            <option value="1">co-partner</option>
+                            <option value="2">adv/sponser/group booking</option>
+                            <option value="3">event public relation</option>
+                            <option value="4">feed back / comment</option>
+                            <option value="5">apply job</option>
+                        </select>
+                       </div>
+                    </aside>
+                    <aside>
+                        <label for="">message</label>
+                       <div>
+                        <textarea name="" id="" cols="30" rows="5" placeholder="WRITE YOUE MESSAGE HERE" class="width-input"></textarea>
+                       </div>
+                    </aside>
+                    <aside>
+                       <label for=""></label>
+                       <div>
+                        <button type="submit">send</button>
+                       </div>
+                    </aside>
+                 </div>
+               <!--  end of class box contact right -->
+         </section>
+   <!-- end of make box contact us  -->
+ <!-- ​​​ start make footer ======================== -->
+       <footer class="footer">
+          <div class="sub_footer_left">
+            <ul>
+              <li>movie</li>
+              <li>Now Showing</li>
+              <li>Coming Soon</li>
+              <li>Cinemas</li>
+              <li>News & Activity</li>
+         </ul>
+         <ul>
+              <li>System Type</li>
+              <li>Kids</li>
+              <li>4dx</li>
+              <li>imax</li>
+              <li>screen x</li>
+         </ul>
+          </div>
+          <div class="sub_footer_right">
+            <h2 class="owner">រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ Angkor Film</h2>
+            <span class="icon_social">
+              <a href=""><i class="fa-brands fa-tiktok"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-telegram"></i></a>
+            </span>
+          </div>
+       </footer>
+ <!--  end of footer  -->
+</body>
+<script src="app.js"></script>
+<script>
+      let arrayContact = [
+         {
+            'contact' : 'business development',
+            'hour' : 'working hours',
+            'tel' : '071 783 4347',
+            'mail' : 'sale@angkorfilm.com.kh',
+         },
+         {
+            'contact' : 'marketing',
+            'hour' : 'working hours',
+            'tel' : '092368090',
+            'mail' : 'digital@angkorfilm.com.kh',
+         },
+      ];
+      let boxContactLeft = document.querySelector(".box-contact-left");
+       window.addEventListener("DOMContentLoaded" , ()=>{
+           let newArrayContact = arrayContact.map((e)=>{
+            return `
+            <div class="sub-box">
+                    <p>${e.contact}</p>
+                     <aside>
+                        <p>opening hours</p>
+                        <p>${e.hour}</p>
+                     </aside>
+                     <aside>
+                        <p>telephones</p>
+                        <p>${e.tel}</p>
+                     </aside>
+                     <aside>
+                        <p>e-mail</p>
+                        <p>${e.mail}</p>
+                     </aside>
+                  </div>
+            `;
+           }).join("");
+           boxContactLeft.innerHTML = newArrayContact;
+       });
+
+</script>
+</html>

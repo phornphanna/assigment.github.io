@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angkor Film</title>
+    <link rel="icon" type="image/x-icon" href="photo/logo_popup.png">
+    <script src="https://kit.fontawesome.com/aad838cc5a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+           @import url('https://fonts.googleapis.com/css2?family=Battambang:wght@300&family=Fira+Sans+Extra+Condensed:wght@300&family=Josefin+Sans:ital,wght@0,600;1,500&family=Koulen&family=Patrick+Hand&family=Poppins:wght@400;600;900&family=Rowdies:wght@300&family=Ysabeau:wght@700&display=swap');
+      :root {
+    --font-menu-kh : 'Battambang', cursive;
+    --font-menu-en : font-family: 'Ysabeau', sans-serif;
+    --font-content : 'Poppins', sans-serif;
+    --bg-menu :  #1da1f2;
+    --color-border-bottom : #6F00FF; 
+    --size-btn : 10px 26px;
+    --color-btn :  #FFFE71;
+      }
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       *::before , *::after {
+        margin: 0;
+        padding: 0;
+       }
+    .box-show {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 50px;
+        padding-left: 60px;
+        gap: 20px;
+    }
+    .box-show  > .show-menu-select{
+        width: 70%;
+        display: flex;
+        border: 1.5px solid white;
+        overflow: hidden;
+    }
+    .box-show > .show-menu-select > .select{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        height: 30px;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    .box-show > .show-menu-select > .select:first-child{
+        width: 50%;
+      background-color: white;    
+    }
+     @media screen and (max-width : 767px){
+      .box-show {
+        padding: 0px 4px;
+      }
+      .box-show > .show-menu-select {
+        width:100%;
+      }.box-show > .show-menu-select  > .select {
+        gap: 0;
+        font-size: 10px;
+        width: 30%;
+        height: 24px;
+      }
+      .box-show > .show-menu-select > .select:first-child {
+        width: 40%;
+      }
+     }
+   @media screen and (max-width : 540px){
+    
+    }
+    .box-show > .show-menu-date {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+   .box-show >  .show-menu-date > div:nth-child(1) {
+     height: 40px;
+     width: 100px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #FFFE71;
+   }.box-show >  .show-menu-date  > i{
+    font-size: 30px;
+   }
+/*  end of style box select */
+/* start style make box content  */
+   .box-show > .box-content {
+    width: 70%;
+   }
+   .box-show  > .box-content{
+    width: 100%;
+   }
+   .box-show > .box-content > .sub-box-content{
+    width: 80%;
+    background:#ffff71c2;
+    height: 360px;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+    align-items: start;
+    color: black;
+    margin-bottom: 18px;
+   }.box-show >.box-content > .sub-box-content > img {
+    width: 200px;
+    height: 90%;
+   }
+   .box-show > .box-content >.sub-box-content > .content {
+    height: 90%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+   }.box-show > .box-content >.sub-box-content > .content > p > i {
+    margin-right: 5px;
+   }
+   .box-show > .box-content > .sub-box-content > .content > p{
+    text-transform: uppercase;
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 0.5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+   }
+   .box-show > .box-content > .sub-box-content >.content > p:first-child {
+    font-size: 18px;
+   }
+   .box-show > .box-content > .sub-box-content > .box-btn {
+    width: 100%;
+    gap: 15px;
+    padding-left: 20px;
+   } .sub-box-content > .box-btn > .btn {
+    padding: 8px 20px;
+    background: transparent;
+    font-size: 13px;
+    border: none;
+    border: 1.5px solid rgb(255, 255, 255);
+   }
+   /*  make responsive content box media screen 540px */
+   @media screen and (max-width : 540px){
+    .box-show > .box-content > .sub-box-content {
+      padding: 0;
+      width: 100%;
+      height: auto;
+      padding-bottom: 10px;
+    }.box-show > .box-content > .sub-box-content > img {
+      width: 100%;
+      height: 300px;
+    }.box-show > .box-content > .sub-box-content > .content {
+      gap: 4px;
+    }
+   
+      }
+    </style>
+</head>
+<body>
+            <!-- m\
+              ake menu bar  -->
+            <header class="header ">
+                <!-- class list make control and set width  -->
+                    <nav class="header_list">
+                      <!-- class logo use for inout logo -->
+                   <div class="logo">
+                     <img src="photo/logo (2).png" alt="">
+                   </div>
+                   <!-- end of class logo -->
+                   <!-- icon bar use for how bar menu when media screen responsive on screen 768px -->
+                   <span class="icon_bar">&#9778;</span>
+                   <!-- end of icon bar -->
+                    <div class="navigation">
+                      <!-- navigation bar use show when popup  -->
+                      <span class="closing"></span>
+                      <!-- class closing use for add content in css use after add entity code sign wronge   -->
+                        <!-- use for control menu option  -->
+                      <ul class="menu">
+                           <li><a href="index.html">MOIVES</a></li>
+                           <li><a href="cinema.html" >cinema</a></li>
+                           <li><a href="promotion.html" >promotion</a></li>
+                           <li><a href="new.html" >new & activity</a></li>
+                           <li><a href="contact.html">contacts us</a></li>
+                           <li><i class="fa-solid fa-magnifying-glass search"></i></li>
+                        </ul>
+                        <!-- end of class menu -->
+                    </div>
+                    <!--  end of class navigation  -->
+                    <!--  start menu right for make btn search and change menu english to khmer  -->
+                    <ul class="menu_right">
+                      <li class="search_icon"><i class="fa-solid fa-magnifying-glass search"></i></li>
+                      <li>en</li>
+                    </ul>
+                    <!--  end of class menu right -->
+                  </nav>
+                  <!--  end of menu  class header list -->
+               </header>
+               <!--  end of tag header -->
+               <!--  start make popup search  -->
+              <section class="box_search">
+                <!--  use class search make bg popup  -->
+                <!--  boxsearch use in parent search class for control header of search -->
+                <div class="sub_search">
+                   <input type="text" name="text" placeholder="search" class="search">
+                  <span class="closing">&#x292C;</span>
+                </div>
+                     <!-- start search list use for show list that user want to find  -->
+                <div class="search_list">
+                  </div>
+                  <!--  end of class box search -->
+                 <!--  end of  class search list  -->
+              </section>
+              <!-- end  of class search  -->
+
+              <section class="box-show">
+                     <div class="show-menu-select">
+                          <div class="select">Select Showtime</div>
+                          <div class="select">Select seats</div>
+                          <div class="select">reserve | buy</div>
+                     </div>
+                     <div class="show-menu-date">
+                         <div class="today">Today</div>
+                         <i class="fa-solid fa-angle-right"></i>
+                     </div>
+                     <div class="box-content">
+                          <div class="sub-box-content">
+                               <img src="photo/show1.jpg" alt="">
+                               <div class="content">
+                                  <p>imax</p>
+                                  <p>the equalizer 3</p>
+                                  <p><i class="fa-regular fa-calendar"></i>31 aug 2023</p>
+                                  <p><i class="fa-regular fa-clock"></i>1 hr. 49 mins</p>
+                                  <p><i class="fa-solid fa-volume-high"></i>en--</p>
+                                  <p><i class="fa-solid fa-tag"></i>action / crime thirller</p>
+                               </div>
+                               <div class="box-btn">
+                                <button class="btn">13:00</button>
+                                <button class="btn">19:00</button>
+                              </div>
+                          </div>
+                     </div>
+              </section>
+
+    <!-- ​​​ start make footer ======================== -->
+    <footer class="footer">
+        <div class="sub_footer_left">
+          <ul>
+            <li>movie</li>
+            <li>Now Showing</li>
+            <li>Coming Soon</li>
+            <li>Cinemas</li>
+            <li>News & Activity</li>
+       </ul>
+       <ul>
+            <li>System Type</li>
+            <li>Kids</li>
+            <li>4dx</li>
+            <li>imax</li>
+            <li>screen x</li>
+       </ul>
+        </div>
+        <div class="sub_footer_right">
+          <h2 class="owner">រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ Angkor Film</h2>
+          <span class="icon_social">
+            <a href=""><i class="fa-brands fa-tiktok"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-telegram"></i></a>
+          </span>
+        </div>
+     </footer>
+<!--  end of footer  -->
+</body>
+<script src="app.js"></script>
+<script>
+     let arrayShowTimeCard=[
+       {
+          'img' : 'photo/cinema1.jpg',
+          'movie_date' : '24 aug 2023',
+          'movie_name' : 'The House',
+          'movie_type' : 'horror',
+          'movie_time' : '1 HR. 36 MINS',
+
+       },
+         {
+          'img' : 'photo/4dmax1.jpg',
+          'movie_date' : '24 aug 2023',
+          'movie_name' : 'Grand Turismo',
+          'movie_time' : '1 HR. 50 MINS',
+          'movie_type' : 'action / Thriller / Romance',
+          'category'   : '4d',
+        },
+        {
+          'img' : 'photo/cinema3.jpg',
+          'movie_date' : '18 aug 2023',
+          'movie_name' : 'long live love',
+          'movie_type' : 'comedy',
+          'movie_time' : '2 HR. 14 MINS',
+
+       },
+        {
+          'img' : 'photo/cinema4.jpg',
+          'movie_date' : '18 aug 2023',
+          'movie_name' : 'Lost In the Stars',
+          'movie_type' : 'Thriller / crime',
+          'movie_time' : '2 HR. 02 MINS',
+       },
+       
+       {
+        'img' : 'photo/4dmax2.jpg',
+        'movie_date' : '17 aug 2023',
+        'movie_name' : 'blue beetle',
+        'movie_type' : 'Action / Advanture / Scr-fi ',
+        'movie_time' : '2 HR. 08 MINS',
+        'category'   : '4d',
+       },
+       {
+        'img' : 'photo/cinema6.jpg',
+        'movie_date' : '14 aug 2023',
+        'movie_name' : 'talk to me',
+        'movie_type' : 'horror',
+        'movie_time' : '1 HR. 35 MINS',
+       },
+       {
+        'img' : 'photo/cinema7.jpg',
+        'movie_date' : '10 aug 2023',
+        'movie_name' : 'love you a millon times',
+        'movie_type' : 'Romance',
+          'movie_time' : '1 HR. 30 MINS',
+
+        },
+        
+        {
+          'img' : 'photo/cinema8.jpg',
+          'movie_date' : '10 aug 2023',
+          'movie_name' : 'Tiger runningtttg',
+          'movie_type' : 'Comedy',
+          'movie_time' : '1 HR. 47 MINS',
+
+       },
+       {
+        'img' : 'photo/cinema_soon1.jpg',
+        'movie_date' : '25 aug 2023',
+        'movie_name' : 'The Moon',
+        'movie_type' : 'Drama',
+        'movie_time' : '2 HR. 09 MINS',
+        'category'   : 'tmr',
+
+     },
+      {
+      'img' : 'photo/cinema_soon2.jpg',
+      'movie_date' : '25 aug 2023',
+      'movie_name' : 'The Tank',
+      'movie_type' : 'Thriller / Horror',
+      'movie_time' : '1 HR. 40 MINS',
+      'category'   : 'tmr',
+      },
+      ];
+      let boxShowTimeContent = document.querySelector(".box-content");
+     window.addEventListener("DOMContentLoaded" , ()=>{
+        let newArrayShowTimeCard = arrayShowTimeCard.map((e)=>{
+     return `
+                  <div class="sub-box-content">
+                               <img src="${e.img}" alt="">
+                               <div class="content">
+                                  <p>${e.movie_name}</p>
+                                  <p><i class="fa-regular fa-calendar"></i>${e.movie_date}</p>
+                                  <p><i class="fa-regular fa-clock"></i>${e.movie_time}</p>
+                                  <p><i class="fa-solid fa-volume-high"></i>kh--</p>
+                                  <p><i class="fa-solid fa-tag"></i>${e.movie_type}</p>
+                               </div>
+                               <div class="box-btn">
+                                <button class="btn">13:00</button>
+                                <button class="btn">19:00</button>
+                              </div>
+                          </div>
+     `;
+        }).join("");
+        boxShowTimeContent.innerHTML = newArrayShowTimeCard;
+     });
+</script>
+</html>
