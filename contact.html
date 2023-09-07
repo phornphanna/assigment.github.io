@@ -92,6 +92,7 @@
     font-size: 15px;
   }.box-contact > .box-contact-right  > aside > label  {
      width: 16%;
+     color: white;
   }
   .box-contact > .box-contact-right > aside > label::after {
     content: "*";
@@ -109,27 +110,32 @@
       border: 1px solid white;
       font-size: 16px;
       outline: none;
+      color: white;
+      text-transform:none;
   }
   .box-contact input:focus{
     border: 1px solid var(--bg-menu);
   }
   .box-contact input , textarea , select {
     padding: 8px;
+    color: white;
   
   }
   select {
     background:#019dff;
   }
   :optional{
-    color: rgb(0, 0, 0);
+    color: rgb(142, 107, 107);
     font-size: 16px;
     background: transparent;
     text-transform: uppercase;
   }
-  
+   
   ::placeholder{
-    color: rgba(0, 0, 0, 0.383);
+    color: rgba(186, 186, 186, 0.873);
+    text-transform: uppercase;
   }
+
   .box-contact aside button {
     border: none;
     padding: 9px 30px;
@@ -139,8 +145,14 @@
     text-transform: uppercase;
     background: var(--color-btn);
   }
+  :optional:focus{
+    border: 1px solid var(--bg-menu);
+  }
   .box-contact > .box-contact-right > aside:last-child > label::after{
     content: none;
+  }
+  textarea:optional{
+    color: white;
   }
   @media screen and (max-width : 1023px){
     .box-contact {
@@ -222,7 +234,7 @@
             <!--  start menu right for make btn search and change menu english to khmer  -->
             <ul class="menu_right">
               <li class="search_icon"><i class="fa-solid fa-magnifying-glass search"></i></li>
-              <li>en</li>
+            
             </ul>
             <!--  end of class menu right -->
           </nav>

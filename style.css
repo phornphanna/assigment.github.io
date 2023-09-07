@@ -4,6 +4,7 @@
     --font-menu-en : font-family: 'Ysabeau', sans-serif;
     --font-content : 'Poppins', sans-serif;
     --bg-menu :  #1da1f2;
+    --bg-color :  linear-gradient( to bottom , #434343 , #000000);
     --color-border-bottom : #6F00FF; 
     --size-btn : 10px 26px;
     --color-footer : rgb(74, 74, 74);
@@ -40,8 +41,7 @@ ul {
 }
 body{
     font-family: var(--font-content);
-    font-family: 16px;
-    background: var(--bg-menu);
+    background: var(--bg-color);
     /* animation : bg 2s infinite alternate; */
     transition: all 4s;
 }
@@ -138,10 +138,10 @@ body{
  .header > .header_list >  .menu_right > li:first-child > i{
     font-size: 14px;
  } 
- .header > .header_list > .menu_right > li:last-child {
-    border: 0.5px solid white;
-    padding: 3px 7px;
- }
+
+
+ 
+
 /* end of meadia screen 1280px */
 
 /*  start emdia screen 1023px */
@@ -804,7 +804,8 @@ body{
     align-items: start;
     justify-content: space-evenly;
     padding: 20px 0px;
-  }
+    box-shadow: 0px -1.5px 12px 2px rgba(144, 134, 134, 0.712);
+}
   /* end of footer class */
   .footer >.sub_footer_left {
     font-family: var(--font-content);
